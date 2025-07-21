@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Beat - Supplementary Material</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: #fff;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .sub-section {
+            margin-bottom: 2rem;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+        }
+
+        .sub-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        #text-guided .video-gallery {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .sub-title {
+                font-size: 1.2rem;
+            }
+            #text-guided .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        .video-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .video-item p {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: #555;
+            min-height: 40px; /* Ensures consistent height even with varying text lengths */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            #text-guided .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                width: 95%;
+            }
+            .video-gallery {
+                grid-template-columns: 1fr; /* Single column on very small screens */
+            }
+            .video-item p {
+                font-size: 0.9rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beyond the Beat</h1>
+    </header>
+
+    <div class="container">
+        <section class="section" id="1">
+            <h2>Visualizations</h2>
+            
+            <div class="sub-section">
+                <h3 class="sub-title">Our results</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/24k-full.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Our result</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        
+
+    </div>
+
+    <div class="container">
+        <section class="section" id="1">
+            <h2>Comparisons with Baselines</h2>
+            
+            <div class="sub-section">
+                <h3 class="sub-title">Lyrics: Girls, what y'all trying to do? / 24 karat magic in the air / Head to toe soul player / Uh, look out! / Second verse for the hustlas (hustlas) / Gangstas (gangstas).</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/24k-1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">Lyrics: Can I preach? (Uh oh) Can I preach? (Uh oh) / I gotta show 'em how a pimp get it in / First, take your sip (sip), do your dip (dip) / Spend your money like money ain't</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/24k-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">Lyrics: Hashtag blessed / They ain't ready for me / I'm a dangerous man with some money in my pocket / (Keep up) / So many pretty girls around me and they waking up the rocket / (Keep up) / Why you mad? Fix ya face / Ain't my fault y'all be jocking / (Keep up) / Players only, come on / Put your pinky rings up to the moon / Hey girls</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/24k-3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>3</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+
+    </div>
+
+    <footer>
+        <p>&copy; Supplementary material for "Beyond the Beat".</p>
+    </footer>
+
+</body>
+</html>

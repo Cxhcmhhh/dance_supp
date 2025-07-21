@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIGO: Affordance-based Multi-human Interaction Generation - Supplementary Material</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: #fff;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .sub-section {
+            margin-bottom: 2rem;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+        }
+
+        .sub-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        #text-guided .video-gallery {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .sub-title {
+                font-size: 1.2rem;
+            }
+            #text-guided .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        .video-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .video-item p {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: #555;
+            min-height: 40px; /* Ensures consistent height even with varying text lengths */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            #text-guided .video-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                width: 95%;
+            }
+            .video-gallery {
+                grid-template-columns: 1fr; /* Single column on very small screens */
+            }
+            .video-item p {
+                font-size: 0.9rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AMIGO: Affordance-based Multi-human Interaction Generation</h1>
+    </header>
+
+    <div class="container">
+        <section class="section" id="1">
+            <h2>Comparisons over Test Set</h2>
+            
+            <div class="sub-section">
+                <h3 class="sub-title">two people are leaping over a hurdle together.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/leaping1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="testset/leaping2.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/gt1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ground Truth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">the first person falls down on the ground, and the other person approaches them and offers support.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/falldown1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="testset/falldown2.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/gt2.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ground Truth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">two performers approach each other while running.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/approachrun1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="testset/approachrun2.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/gt3.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ground Truth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">the other person stands up and releases the hands. they take one step back with the right foot while the first one puts both hands down and stands straight.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/standup1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="testset/standup1.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/gt4.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ground Truth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">they move their arms up and down while walking closer and further away from each other.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/upanddown1.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="testset/upanddown2.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="testset/gt5.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ground Truth</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="section" id="2">
+            <h2>Comparisons over Custom Prompts</h2>
+            
+            <div class="sub-section">
+                <h3 class="sub-title">A person points at something and whisper.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/point.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/point-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sub-section">
+                <h3 class="sub-title">A person sits down with another sitting person.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/sittogether.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/sittogether-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">A person teaches another to box while the other defends.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/teachbox.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/teachbox-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">The two persons shake hands formally.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/formalshake.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/formalshake-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">One person trips over, another helps him to stand up.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/helptripover.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/helptripover-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">One person hands an object to another.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/handobj.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/handobj-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">The two persons dance together, spinning.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/dance.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/dance-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 class="sub-title">The two persons rotate together.</h3>
+                <div class="video-gallery">
+                    <div class="video-item">
+                    <video controls muted loop playsinline>
+                        <source src="custom/dancespin.mkv" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls muted loop playsinline>
+                            <source src="custom/dancespin-i.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>InterGen</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; Supplementary material for "AMIGO: Affordance-based Multi-human Interaction Generation".</p>
+    </footer>
+
+</body>
+</html>
